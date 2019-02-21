@@ -6,8 +6,8 @@ Module to create instances in OpenStack.
 
 ```
 module "instance" {
-  source = "/path"
-  vm-name = "jmier-test"
+  source = "github.com/jonathanmier/terraform_openstack_modules/tree/master/simple_instance"
+  vm-name = "jmier"
   key-pair = "jmier"
   instance-count = "3"
   image-name = "Ubuntu-14.04"
@@ -17,3 +17,4 @@ module "instance" {
   floating-ip-pool = "external-network"
 }
 ```
+Name of instances will appear as jmier-1, jmier-2 and jmier-3 in this example.
